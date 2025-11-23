@@ -24,7 +24,7 @@ export default function Hero() {
         </button>
       </div>
       <i
-        className="mt-28 text-4xl text-gray-700 animate-bounce cursor-pointer"
+        className="absolute bottom-10 text-4xl text-gray-700 animate-bounce cursor-pointer"
         onClick={goToAbout}
       >
         ↓
