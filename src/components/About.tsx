@@ -33,7 +33,13 @@ export default function About() {
       className="flex items-center justify-center min-h-screen bg-white m-0 text-center p-4 gap-10"
     >
       <div>
-        <div className="w-40 h-40 bg-gray-300 rounded-full mb-6 mx-auto"></div>
+        <div
+          className={`w-40 h-40 bg-gray-300 rounded-full mb-6 mx-auto ${
+            isVisible
+              ? "animate-[floatFromLeft_1.5s_ease-out_forwards]"
+              : "opacity-0"
+          }`}
+        ></div>
       </div>
       <div>
         <h2
@@ -45,7 +51,15 @@ export default function About() {
         >
           About Me
         </h2>
+        <div
+          className={`text-lg ${
+            isVisible
+              ? "animate-[appearFromBottom_1.5s_ease-out_forwards]"
+              : "opacity-0"
+          }`}
+        >
           <AboutTabs />
+        </div>
       </div>
     </section>
   );
