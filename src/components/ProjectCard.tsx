@@ -12,12 +12,14 @@ export default function ProjectCard({
   project: { title, description, tags },
 }: ProjectCardProps) {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+    <div className="max-w-full rounded overflow-hidden shadow-lg bg-white">
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{title}</div>
+        <div className="font-bold text-xl mb-10">{title}</div>
         {/* placeholder image */}
-        <div className="w-full h-40 bg-gray-200 mb-4"></div>
-        <p className="text-gray-700 text-base">{description}</p>
+        <div className="flex justify-center items-center mb-4 gap-10 lg:flex-row md:flex-row flex-col">
+          <div className="w-1/2 min-w-[300px] h-80 bg-gray-200 mb-4"></div>
+          <p className="text-gray-700 text-base">{description}</p>
+        </div>
       </div>
       <div className="px-6 pt-4 pb-2">
         {tags.map((tag, index) => (
