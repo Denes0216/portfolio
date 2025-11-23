@@ -10,6 +10,15 @@ html {
     }
 }
 
+@keyframes bgPan {
+    0%, 100% {
+        background-position: 0% center;
+    }
+    50% {
+        background-position: 100% center;
+    }
+}
+
 @keyframes float {
     0%, 100% {
         transform: translateY(0px) translateX(0px);
