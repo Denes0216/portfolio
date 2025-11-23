@@ -10,33 +10,33 @@ export default function Hero() {
 
   return (
     <section
-      className="relative flex flex-col items-center justify-center min-h-screen bg-linear-to-br from-gray-50 to-gray-100 m-0 text-center p-4 gap-10 overflow-hidden animate-[bgPan_15s_ease-in-out_infinite]"
+      className="relative m-0 flex min-h-screen animate-[bgPan_15s_ease-in-out_infinite] flex-col items-center justify-center gap-10 overflow-hidden bg-linear-to-br from-gray-50 to-gray-100 p-4 text-center"
       style={{
         backgroundImage: `url(${heroBackground})`,
         backgroundSize: "150% auto",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <h1 className="relative z-10 text-7xl text-white font-bold mb-4 animate-[appearFromLeft_1.5s_ease-out_forwards]">
+      <h1 className="relative z-10 mb-4 animate-[appearFromLeft_1.5s_ease-out_forwards] text-7xl font-bold text-white">
         Welcome to My Portfolio
       </h1>
-      <p className="relative z-10 text-lg animate-[appearFromBottom_1.5s_ease-out_forwards] text-white max-w-xl">
+      <p className="relative z-10 max-w-xl animate-[appearFromBottom_1.5s_ease-out_forwards] text-lg text-white">
         Hi! I'm Denes Orban, a passionate developer specializing in building
         amazing web applications.
       </p>
-      <div className="relative z-10 flex space-x-4 mt-6">
-        <button className="mt-6 px-6 bg-gray-500 border border-gray-700 text-white py-2 rounded-3xl hover:bg-gray-700">
+      <div className="relative z-10 mt-6 flex space-x-4">
+        <button className="mt-6 rounded-3xl border border-gray-700 bg-gray-500 px-6 py-2 text-white hover:bg-gray-700">
           Get in Touch
         </button>
         <button
-          className="mt-6 px-6 bg-gray-50 border border-gray-300 text-gray-700 py-2 rounded-3xl hover:bg-gray-200 "
+          className="mt-6 rounded-3xl border border-gray-300 bg-gray-50 px-6 py-2 text-gray-700 hover:bg-gray-200"
           onClick={goToSection.bind(null, "projects")}
         >
           View My Work
         </button>
       </div>
       <i
-        className="absolute bottom-10 text-4xl text-white animate-bounce cursor-pointer"
+        className="absolute bottom-10 animate-bounce cursor-pointer text-4xl text-white"
         onClick={goToSection.bind(null, "about")}
       >
         ↓

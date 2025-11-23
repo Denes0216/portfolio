@@ -35,14 +35,14 @@ export default function AboutTabs() {
   };
 
   return (
-    <div className="text-center max-w-xl mx-auto">
+    <div className="mx-auto max-w-xl text-center">
       {Object.keys(tabs).map((tab) => (
         <button
           key={tab}
-          className={`px-4 py-2 mx-2 rounded-3xl border ${
+          className={`mx-2 rounded-3xl border px-4 py-2 ${
             tab === activeTab
-              ? "bg-gray-500 border-gray-700 text-white"
-              : "bg-gray-50 border-gray-300 text-gray-700 hover:bg-gray-200"
+              ? "border-gray-700 bg-gray-500 text-white"
+              : "border-gray-300 bg-gray-50 text-gray-700 hover:bg-gray-200"
           }`}
           onClick={() => handleTabClick(tab)}
         >

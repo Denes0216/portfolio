@@ -51,29 +51,29 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center min-h-screen bg-gray-100 m-0 text-center p-4 gap-10"
+      className="m-0 flex min-h-screen flex-col items-center justify-center gap-10 bg-gray-100 p-4 text-center"
     >
-      <h2 className="text-3xl font-bold mb-4">My Projects</h2>
+      <h2 className="mb-4 text-3xl font-bold">My Projects</h2>
       <div
         ref={scrollRef}
         onScroll={handleScroll}
-        className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide w-full max-w-4xl gap-10 px-4"
+        className="scrollbar-hide flex w-full max-w-4xl snap-x snap-mandatory gap-10 overflow-x-auto px-4"
         style={{ scrollbarWidth: "none" }}
       >
         {projects.map((project, index) => (
-          <div key={index} className="snap-center shrink-0 w-full">
+          <div key={index} className="w-full shrink-0 snap-center">
             <ProjectCard project={project} />
           </div>
         ))}
       </div>
-      <div className="flex gap-2 mt-4">
+      <div className="mt-4 flex gap-2">
         {projects.map((_, index) => (
           <button
             key={index}
             onClick={() => scrollToIndex(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
+            className={`h-3 w-3 rounded-full transition-all ${
               index === activeIndex
-                ? "bg-gray-700 w-8"
+                ? "w-8 bg-gray-700"
                 : "bg-gray-400 hover:bg-gray-500"
             }`}
             aria-label={`Go to project ${index + 1}`}

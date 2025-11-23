@@ -12,7 +12,7 @@ export default function About() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -30,11 +30,11 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="flex items-center justify-center min-h-screen bg-white m-0 text-center gap-10"
+      className="m-0 flex min-h-screen items-center justify-center gap-10 bg-white text-center"
     >
       <div>
         <div
-          className={`relative h-screen w-96 flex-1 bg-gray-300 m-0 ${
+          className={`relative m-0 h-screen w-96 flex-1 bg-gray-300 ${
             isVisible
               ? "animate-[floatFromLeft_1.5s_ease-out_forwards]"
               : "opacity-0"
@@ -43,7 +43,7 @@ export default function About() {
       </div>
       <div className="flex flex-2 flex-col items-center">
         <h2
-          className={`text-3xl font-bold mb-4 ${
+          className={`mb-4 text-3xl font-bold ${
             isVisible
               ? "animate-[appearFromLeft_1.5s_ease-out_forwards]"
               : "opacity-0"
