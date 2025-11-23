@@ -43,7 +43,7 @@ export default function AboutTabs() {
           {tab}
         </button>
       ))}
-      <div className="mt-6">{tabs[activeTab as keyof typeof tabs]}</div>
+      <div className="mt-6 min-h-32">{tabs[activeTab as keyof typeof tabs]}</div>
     </div>
   );
 }

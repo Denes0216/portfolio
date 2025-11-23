@@ -30,7 +30,7 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="flex items-center justify-center min-h-screen bg-white m-0 text-center p-4 gap-10"
+      className="flex items-center justify-center min-h-screen bg-white m-0 text-center p-4 pt-20 gap-10"
     >
       <div>
         <div
@@ -41,7 +41,7 @@ export default function About() {
           }`}
         ></div>
       </div>
-      <div>
+      <div className="flex flex-col items-center">
         <h2
           className={`text-3xl font-bold mb-4 ${
             isVisible
