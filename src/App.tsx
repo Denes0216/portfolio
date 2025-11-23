@@ -1,7 +1,9 @@
 import "./App.css";
 import About from "./components/About";
+import BackToTop from "./components/BackToTop";
 import CursorOrb from "./components/CursorOrb";
 import Hero from "./components/Hero";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       <CursorOrb />
       <Hero />
       <About />
+      <Projects />
+      <BackToTop />
     </>
   );
 }
