@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import AboutTabs from "./AboutTabs";
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -44,18 +45,7 @@ export default function About() {
         >
           About Me
         </h2>
-        <p
-          className={`text-lg text-gray-400 max-w-2xl ${
-            isVisible
-              ? "animate-[appearFromBottom_1.5s_ease-out_forwards]"
-              : "opacity-0"
-          }`}
-        >
-          I'm Denes Orban, a dedicated developer with a passion for creating
-          innovative web applications. With a strong foundation in both
-          front-end and back-end technologies, I strive to build seamless user
-          experiences and efficient solutions.
-        </p>
+          <AboutTabs />
       </div>
     </section>
   );

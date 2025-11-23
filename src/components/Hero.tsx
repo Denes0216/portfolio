@@ -1,8 +1,9 @@
 export default function Hero() {
-  const goToAbout = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
+
+  const goToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -19,13 +20,14 @@ export default function Hero() {
         <button className="mt-6 px-6 bg-gray-500 border border-gray-700 text-white py-2 rounded-3xl hover:bg-gray-700">
           Get in Touch
         </button>
-        <button className="mt-6 px-6 bg-gray-50 border border-gray-300 text-gray-700 py-2 rounded-3xl hover:bg-gray-200 ">
+        <button className="mt-6 px-6 bg-gray-50 border border-gray-300 text-gray-700 py-2 rounded-3xl hover:bg-gray-200 "
+        onClick={goToSection.bind(null, "projects")}>
           View My Work
         </button>
       </div>
       <i
         className="absolute bottom-10 text-4xl text-gray-700 animate-bounce cursor-pointer"
-        onClick={goToAbout}
+        onClick={goToSection.bind(null, "about")}
       >
         ↓
       </i>
