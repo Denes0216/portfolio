@@ -99,7 +99,7 @@ body {
 
   100% {
     opacity: 1;
-    clip-path: inset(0 0 0 0);
+    clip-path: inset(-20% 0 -20% 0);
   }
 }
 
