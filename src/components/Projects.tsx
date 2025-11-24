@@ -48,23 +48,49 @@ export default function Projects() {
     }
   };
 
+  const goToPrevious = () => {
+    const newIndex = activeIndex > 0 ? activeIndex - 1 : projects.length - 1;
+    scrollToIndex(newIndex);
+  };
+
+  const goToNext = () => {
+    const newIndex = activeIndex < projects.length - 1 ? activeIndex + 1 : 0;
+    scrollToIndex(newIndex);
+  };
+
   return (
     <section
       id="projects"
       className="m-0 flex min-h-screen snap-start flex-col items-center justify-center gap-10 bg-gray-100 p-4 text-center"
     >
       <h2 className="mb-4 text-3xl font-bold">My Projects</h2>
-      <div
-        ref={scrollRef}
-        onScroll={handleScroll}
-        className="scrollbar-hide flex w-full max-w-4xl snap-x snap-mandatory gap-10 overflow-x-auto px-4"
-        style={{ scrollbarWidth: "none" }}
-      >
-        {projects.map((project, index) => (
-          <div key={index} className="w-full shrink-0 snap-center">
-            <ProjectCard project={project} />
-          </div>
-        ))}
+      <div className="relative flex w-full max-w-4xl items-center gap-4">
+        <button
+          onClick={goToPrevious}
+          className="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gray-700 bg-transparent text-2xl text-black transition-all hover:bg-gray-800 hover:text-white"
+          aria-label="Previous project"
+        >
+          ←
+        </button>
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="scrollbar-hide flex w-full snap-x snap-mandatory gap-10 overflow-x-auto px-4"
+          style={{ scrollbarWidth: "none" }}
+        >
+          {projects.map((project, index) => (
+            <div key={index} className="w-full shrink-0 snap-center">
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </div>
+        <button
+          onClick={goToNext}
+          className="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gray-700 bg-transparent text-2xl text-black transition-all hover:bg-gray-800 hover:text-white"
+          aria-label="Next project"
+        >
+          →
+        </button>
       </div>
       <div className="mt-4 flex gap-2">
         {projects.map((_, index) => (
