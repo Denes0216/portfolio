@@ -4,16 +4,17 @@ export default function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const container = document.getElementById("scroll-container");
     const handleScroll = () => {
-      if (window.scrollY > 300) {
+      if (container && container.scrollTop > 300) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    container?.addEventListener("scroll", handleScroll);
+    return () => container?.removeEventListener("scroll", handleScroll);
   }, []);
 
   if (!isVisible) {
@@ -21,7 +22,8 @@ export default function BackToTop() {
   }
 
   const goToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const container = document.getElementById("scroll-container");
+    container?.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

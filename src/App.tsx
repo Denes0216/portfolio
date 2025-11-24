@@ -7,12 +7,15 @@ import Projects from "./components/Projects";
 function App() {
   return (
     <>
-      <div className="h-screen snap-y snap-mandatory overflow-y-scroll">
+      <div
+        id="scroll-container"
+        className="h-screen snap-y snap-mandatory overflow-y-scroll"
+      >
         <Hero />
         <About />
         <Projects />
+        <BackToTop />
       </div>
-      <BackToTop />
     </>
   );
 }
