@@ -35,23 +35,25 @@ export default function AboutTabs() {
   };
 
   return (
-    <div className="mx-auto max-w-xl text-center">
-      {Object.keys(tabs).map((tab) => (
-        <button
-          key={tab}
-          className={`mx-2 rounded-3xl border px-4 py-2 ${
-            tab === activeTab
-              ? "border-gray-700 bg-gray-500 text-white"
-              : "border-gray-300 bg-gray-50 text-gray-700 hover:bg-gray-200"
-          }`}
-          onClick={() => handleTabClick(tab)}
-        >
-          {tab}
-        </button>
-      ))}
+    <div className="mx-auto flex max-w-xl flex-col items-center">
+      <div>
+        {Object.keys(tabs).map((tab) => (
+          <button
+            key={tab}
+            className={`mx-2 rounded-3xl border px-4 py-2 ${
+              tab === activeTab
+                ? "border-gray-700 bg-gray-500 text-white"
+                : "border-gray-300 bg-gray-50 text-gray-700 hover:bg-gray-200"
+            }`}
+            onClick={() => handleTabClick(tab)}
+          >
+            {tab}
+          </button>
+        ))}
+      </div>
       <div
         key={animationKey}
-        className="mt-6 min-h-32 animate-[fadeIn_1s_ease-out_forwards]"
+        className="mt-6 min-h-32 animate-[fadeIn_1s_ease-out_forwards] pl-5"
       >
         {tabs[activeTab as keyof typeof tabs]}
       </div>

@@ -7,9 +7,11 @@ import Projects from "./components/Projects";
 function App() {
   return (
     <>
-      <Hero />
-      <About />
-      <Projects />
+      <div className="h-screen snap-y snap-mandatory overflow-y-scroll">
+        <Hero />
+        <About />
+        <Projects />
+      </div>
       <BackToTop />
     </>
   );

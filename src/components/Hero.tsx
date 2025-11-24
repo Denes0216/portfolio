@@ -10,7 +10,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative m-0 flex min-h-screen animate-[bgPan_15s_ease-in-out_infinite] flex-col items-center justify-center gap-10 overflow-hidden bg-linear-to-br from-gray-50 to-gray-100 p-4 text-center"
+      className="relative m-0 flex min-h-screen animate-[bgPan_15s_ease-in-out_infinite] snap-start flex-col items-center justify-center gap-10 overflow-hidden bg-linear-to-br from-gray-50 to-gray-100 p-4 text-center"
       style={{
         backgroundImage: `url(${heroBackground})`,
         backgroundSize: "150% auto",

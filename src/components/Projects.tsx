@@ -51,7 +51,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="m-0 flex min-h-screen flex-col items-center justify-center gap-10 bg-gray-100 p-4 text-center"
+      className="m-0 flex min-h-screen snap-start flex-col items-center justify-center gap-10 bg-gray-100 p-4 text-center"
     >
       <h2 className="mb-4 text-3xl font-bold">My Projects</h2>
       <div
