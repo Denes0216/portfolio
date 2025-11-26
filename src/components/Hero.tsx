@@ -25,7 +25,10 @@ export default function Hero() {
         amazing web applications.
       </p>
       <div className="relative z-10 mt-4 flex w-full max-w-xs flex-col items-center justify-center gap-4 px-4 sm:mt-6 sm:max-w-none sm:flex-row sm:gap-6 md:gap-8">
-        <button className="group relative mt-2 w-full overflow-hidden rounded-full bg-linear-to-r from-gray-800 to-gray-600 px-8 py-3 text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl sm:mt-6 sm:w-auto">
+        <button
+          className="group relative mt-2 w-full overflow-hidden rounded-full bg-linear-to-r from-gray-800 to-gray-600 px-8 py-3 text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl sm:mt-6 sm:w-auto"
+          onClick={goToSection.bind(null, "contact")}
+        >
           <span className="absolute inset-0 bg-linear-to-r from-gray-600 to-gray-800 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
           <span className="relative flex items-center justify-center gap-2 font-semibold">
             <FaEnvelope className="transition-transform duration-300 group-hover:rotate-12" />
