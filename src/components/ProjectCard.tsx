@@ -17,7 +17,7 @@ export default function ProjectCard({
   project: { title, description, tags, demoLink, githubLink },
 }: ProjectCardProps) {
   return (
-    <div className="group relative max-w-full animate-[appearFromBottom_1.5s_ease-out_forwards] overflow-hidden rounded-2xl bg-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+    <div className="group relative max-w-full animate-[appearFromBottom_1.5s_ease-out_forwards] overflow-hidden rounded-xl bg-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
       <div className="absolute inset-0 bg-linear-to-br from-gray-900/0 to-gray-900/0 transition-all duration-300 group-hover:from-gray-900/5 group-hover:to-gray-900/10"></div>
 
       <div className="relative px-6 py-6 sm:px-8 sm:py-8">
@@ -25,7 +25,7 @@ export default function ProjectCard({
           {title}
         </h3>
 
-        <div className="mb-6 flex flex-col items-center justify-center md:flex-row gap-6">
+        <div className="mb-6 flex flex-col items-center justify-center gap-6 md:flex-row">
           <div className="group/img relative h-48 w-full overflow-hidden rounded-xl bg-linear-to-br from-gray-200 to-gray-300 shadow-lg transition-transform duration-300 hover:scale-105 sm:h-56 md:h-64 md:w-1/2 md:min-w-[300px]">
             <div className="flex h-full w-full items-center justify-center">
               <div className="text-6xl text-gray-400/50 transition-transform duration-300 group-hover/img:scale-110">
@@ -46,7 +46,7 @@ export default function ProjectCard({
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="inline-block rounded-lg bg-linear-to-r from-gray-100 to-gray-200 px-3 py-1.5 text-xs font-semibold text-gray-700 transition-all hover:from-gray-700 hover:to-gray-600 hover:text-white sm:text-sm"
+              className="inline-block rounded-xl bg-linear-to-r from-gray-100 to-gray-200 px-3 py-1.5 text-xs font-semibold text-gray-700 transition-all hover:from-gray-700 hover:to-gray-600 hover:text-white sm:text-sm"
             >
               {tag}
             </span>

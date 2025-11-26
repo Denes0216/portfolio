@@ -72,7 +72,7 @@ export default function AboutTabs() {
     ),
     Experience: (
       <div className="space-y-4">
-        <div className="rounded-lg border-l-4 border-gray-600 bg-gray-50 p-4 text-left transition-all hover:shadow-lg">
+        <div className="rounded-xl border-l-4 border-gray-600 bg-gray-50 p-4 text-left transition-all hover:shadow-lg">
           <h3 className="font-bold text-gray-800">Senior Developer</h3>
           <p className="text-sm text-gray-600">Tech Company • 2021 - Present</p>
           <p className="mt-2 text-sm text-gray-700">
@@ -80,7 +80,7 @@ export default function AboutTabs() {
             developers, and implementing best practices.
           </p>
         </div>
-        <div className="rounded-lg border-l-4 border-gray-500 bg-gray-50 p-4 text-left transition-all hover:shadow-lg">
+        <div className="rounded-xl border-l-4 border-gray-500 bg-gray-50 p-4 text-left transition-all hover:shadow-lg">
           <h3 className="font-bold text-gray-800">Full Stack Developer</h3>
           <p className="text-sm text-gray-600">Startup Inc • 2019 - 2021</p>
           <p className="mt-2 text-sm text-gray-700">
@@ -92,7 +92,7 @@ export default function AboutTabs() {
     ),
     Education: (
       <div className="space-y-4">
-        <div className="rounded-lg border-l-4 border-gray-600 bg-gray-50 p-4 text-left transition-all hover:shadow-lg">
+        <div className="rounded-xl border-l-4 border-gray-600 bg-gray-50 p-4 text-left transition-all hover:shadow-lg">
           <h3 className="font-bold text-gray-800">Computer Science Degree</h3>
           <p className="text-sm text-gray-600">University Name • 2015 - 2019</p>
           <p className="mt-2 text-sm text-gray-700">
@@ -100,8 +100,8 @@ export default function AboutTabs() {
             technologies.
           </p>
         </div>
-        <div className="rounded-lg border-l-4 border-gray-500 bg-gray-50 p-4 text-left transition-all hover:shadow-lg">
-          <h3 className="font-bold text-gray-800">Certifications</h3>
+        <div className="rounded-xl border-l-4 border-gray-500 bg-gray-50 p-4 text-left transition-all hover:shadow-lg">
+          <h3 className="font-bold text-gray-800">Online Certifications</h3>
           <p className="mt-2 text-sm text-gray-700">
             AWS Certified Developer • Advanced React Patterns • Full Stack Web
             Development
@@ -123,7 +123,7 @@ export default function AboutTabs() {
         {Object.keys(tabs).map((tab, index) => (
           <div key={tab} className="flex items-center">
             <button
-              className={`flex items-center gap-1.5 px-4 py-2 text-sm transition-colors ${
+              className={`relative flex items-center gap-1.5 px-4 py-2 text-sm transition-colors ${
                 tab === activeTab
                   ? "font-semibold text-gray-700"
                   : "text-gray-500 hover:text-gray-700"
@@ -132,6 +132,11 @@ export default function AboutTabs() {
             >
               <span className="text-base">{tabIcons[tab]}</span>
               {tab}
+              <span
+                className={`absolute bottom-0 left-0 h-0.5 bg-gray-700 transition-all duration-300 ${
+                  tab === activeTab ? "w-full" : "w-0"
+                }`}
+              ></span>
             </button>
             {index < Object.keys(tabs).length - 1 && (
               <div className="h-6 w-px bg-gray-300"></div>
@@ -144,7 +149,7 @@ export default function AboutTabs() {
         {Object.keys(tabs).map((tab) => (
           <button
             key={tab}
-            className={`flex min-w-[110px] items-center gap-2 rounded-3xl border px-4 py-2 text-sm transition-colors sm:w-auto sm:text-base ${
+            className={`flex min-w-[110px] items-center gap-2 rounded-xl border px-4 py-2 text-sm transition-colors sm:w-auto sm:text-base ${
               tab === activeTab
                 ? "border-gray-700 bg-gray-500 text-white"
                 : "border-gray-300 bg-gray-50 text-gray-700 hover:bg-gray-200"
@@ -156,11 +161,13 @@ export default function AboutTabs() {
           </button>
         ))}
       </div>
-      <div
-        key={animationKey}
-        className="mt-4 min-h-32 animate-[fadeIn_1s_ease-out_forwards] px-4 text-left text-sm sm:mt-6 sm:pl-5 sm:text-base"
-      >
-        {tabs[activeTab as keyof typeof tabs]}
+      <div className="mt-4 w-full sm:mt-6">
+        <div
+          key={animationKey}
+          className="animate-[fadeIn_1s_ease-out_forwards] px-4 text-left text-sm sm:pl-5 sm:text-base"
+        >
+          {tabs[activeTab as keyof typeof tabs]}
+        </div>
       </div>
     </div>
   );

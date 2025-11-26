@@ -36,7 +36,7 @@ export default function About() {
     >
       <div className="hidden lg:flex lg:flex-col lg:items-center lg:justify-center">
         <div
-          className={`relative h-80 w-80 overflow-hidden rounded-3xl bg-linear-to-br from-gray-300 to-gray-400 shadow-2xl transition-all duration-500 ${
+          className={`relative h-80 w-80 overflow-hidden rounded-xl bg-linear-to-br from-gray-300 to-gray-400 shadow-2xl transition-all duration-500 ${
             isVisible
               ? "animate-[floatFromLeft_1.5s_ease-out_forwards] hover:scale-105 hover:rotate-2"
               : "opacity-0"
