@@ -14,15 +14,9 @@ export default function AboutTabs() {
   };
 
   const tabs = {
-    Skills: (
-      <Skills />
-    ),
-    Experience: (
-      <Experience />
-    ),
-    Education: (
-      <Education />
-    ),
+    Skills: <Skills />,
+    Experience: <Experience />,
+    Education: <Education />,
   };
 
   const tabIcons: { [key: string]: React.ReactElement } = {
