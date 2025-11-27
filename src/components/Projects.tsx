@@ -1,5 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import ProjectCard from "./ProjectCard";
+import NextChapter1 from "../assets/NextChapter-1.png";
+import NextChapter2 from "../assets/NextChapter-2.png";
+import NextChapter3 from "../assets/NextChapter-3.png";
+import Weatherdle1 from "../assets/Weatherdle-1.png";
+import Weatherdle2 from "../assets/Weatherdle-2.png";
+import Weatherdle3 from "../assets/Weatherdle-3.png";
 
 export default function Projects() {
   interface Project {
@@ -8,35 +14,39 @@ export default function Projects() {
     tags: string[];
     demoLink?: string;
     githubLink?: string;
-    featured?: boolean;
+    workInProgress?: boolean;
+    images?: string[];
   }
 
   const projects: Project[] = [
     {
-      title: "E-Commerce Platform",
+      title: "NextChapter",
       description:
-        "A full-stack e-commerce solution with payment integration, inventory management, and real-time analytics. Built for scalability and performance.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+        "Are you a book lover looking for your next great read? NextChapter is a great book recommendation app that helps you narrow down your options based on your preferences. \n\nThe app uses openlibrary.org's API.",
+      tags: ["TypeScript", "React", "Axios", "React Router", "CSS Modules"],
       demoLink: "#",
       githubLink: "#",
-      featured: true,
+      workInProgress: false,
+      images: [NextChapter1, NextChapter2, NextChapter3],
     },
     {
-      title: "AI Task Manager",
+      title: "Weatherdle",
       description:
-        "Smart productivity app using machine learning to prioritize tasks and suggest optimal scheduling. Features natural language processing.",
-      tags: ["TypeScript", "Python", "TensorFlow", "Next.js"],
+        "Guess the city based on the weather data provided! Weatherdle is a fun and challenging game that tests your knowledge of world cities and their climates. \n\nThe app uses WeatherAPI.com's API.",
+      tags: ["TypeScript", "React", "Redux", "Fuse.js", "CSS Modules"],
       demoLink: "#",
       githubLink: "#",
-      featured: true,
+      workInProgress: false,
+      images: [Weatherdle1, Weatherdle2, Weatherdle3],
     },
     {
-      title: "Social Media Dashboard",
+      title: "MindFrame AI",
       description:
-        "Analytics dashboard for tracking social media metrics across multiple platforms with beautiful data visualizations and insights.",
-      tags: ["Vue.js", "D3.js", "Firebase", "Tailwind"],
+        "Generate learning cards from any text input using AI. MindFrame AI leverages OpenAI's GPT-4 to create concise and informative flashcards, making studying more efficient and effective.",
+      tags: ["TypeScript", "Full Stack", "OpenAI GPT-4", "Tailwind", "Bun"],
       demoLink: "#",
       githubLink: "#",
+      workInProgress: true,
     },
   ];
 
