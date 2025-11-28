@@ -89,7 +89,7 @@ export default function Contact() {
         <p className="mb-8 text-base leading-relaxed text-gray-700 sm:text-lg dark:text-gray-300">
           I'm always interested in hearing about new opportunities and
           collaborations. Whether you have a question or just want to say hi,
-          feel free to reach out!
+          feel free to reach out
         </p>
 
         <div className="mb-8 flex flex-col gap-4 sm:gap-6">
