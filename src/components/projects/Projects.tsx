@@ -110,7 +110,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={sectionRef}
-      className={`relative z-20 m-0 flex flex-col sm:flex-row min-h-screen items-center justify-center gap-8 bg-linear-to-br from-gray-100 to-gray-50 p-4 text-center transition-colors duration-300 sm:gap-10 sm:p-6 dark:from-gray-900 dark:to-gray-800 ${""}`}
+      className={`relative z-20 m-0 flex min-h-screen flex-col items-center justify-center gap-8 bg-linear-to-br from-gray-100 to-gray-50 p-4 text-center transition-colors duration-300 sm:flex-row sm:gap-10 sm:p-6 dark:from-gray-900 dark:to-gray-800 ${""}`}
     >
       <div className="shrink-0">
         <div
@@ -148,7 +148,7 @@ export default function Projects() {
               : "opacity-0"
           }`}
         >
-          My Projects
+          My Mapi
         </h2>
         <div
           className={`mx-auto h-1 w-24 rounded-full bg-linear-to-r from-gray-600 to-gray-400 ${

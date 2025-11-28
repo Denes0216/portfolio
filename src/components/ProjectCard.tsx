@@ -40,7 +40,7 @@ export default function ProjectCard({
   }, [images]);
 
   return (
-    <div className="group relative max-w-full animate-[appearFromBottom_1.5s_ease-out_forwards] overflow-hidden rounded-xl bg-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl dark:bg-gray-800">
+    <div className="group relative max-w-full animate-[appearFromBottom_1.5s_ease-out_forwards] overflow-hidden rounded-xl bg-white shadow-xl transition-all duration-300 dark:bg-gray-800">
       <div className="absolute inset-0 bg-linear-to-br from-gray-900/0 to-gray-900/0 transition-all duration-300 group-hover:from-gray-900/5 group-hover:to-gray-900/10"></div>
       {workInProgress && (
         <div className="absolute top-4 right-4 z-10 rounded-full bg-yellow-500 px-3 py-1 text-xs font-semibold text-white shadow-lg">

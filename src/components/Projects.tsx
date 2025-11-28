@@ -111,9 +111,9 @@ export default function Projects() {
       ref={sectionRef}
       className={`relative z-20 m-0 flex min-h-screen flex-col items-center justify-center gap-8 bg-linear-to-br from-gray-100 to-gray-50 p-4 text-center transition-colors duration-300 sm:gap-10 sm:p-6 dark:from-gray-900 dark:to-gray-800 ${""}`}
     >
-      <div className="mb-4">
+      <div className="shrink-0">
         <h2
-          className={`mb-2 bg-linear-to-r from-gray-800 to-gray-600 bg-clip-text text-3xl font-bold text-transparent sm:mb-4 sm:text-4xl lg:text-5xl dark:from-gray-200 dark:to-gray-400 ${
+          className={`mb-2 h-18 bg-linear-to-r from-gray-800 to-gray-600 bg-clip-text text-3xl font-bold text-transparent sm:mb-4 sm:text-4xl lg:text-5xl dark:from-gray-200 dark:to-gray-400 ${
             isVisible
               ? "animate-[appearFromBottom_1.5s_ease-out_forwards]"
               : "opacity-0"
@@ -123,13 +123,13 @@ export default function Projects() {
         </h2>
         <div
           className={`mx-auto h-1 w-24 rounded-full bg-linear-to-r from-gray-600 to-gray-400 ${
-            isVisible ? "animate-[fadeIn_1.5s_ease-out_forwards]" : "opacity-0"
+            isVisible ? "animate-[appearFromBottom_1.5s_ease-out_forwards]" : "opacity-0"
           }`}
         ></div>
       </div>
       <div
         className={`relative flex w-full max-w-4xl items-center gap-2 overflow-visible sm:gap-4 ${
-          isVisible ? "animate-[fadeIn_1.5s_ease-out_forwards]" : "opacity-0"
+          isVisible ? "animate-[appearFromBottom_1.5s_ease-out_forwards]" : "opacity-0"
         }`}
       >
         <div

@@ -3,6 +3,7 @@ import heroBackgroundDark from "../assets/hero_background_dark.png";
 import { FaEnvelope, FaArrowRight } from "react-icons/fa";
 import { useTheme } from "../contexts/ThemeContext";
 import ThemeToggle from "./ThemeToggle";
+import { GoChevronDown } from "react-icons/go";
 
 export default function Hero() {
   const { theme } = useTheme();
@@ -22,20 +23,33 @@ export default function Hero() {
       }}
     >
       <ThemeToggle />
-      <h1 className="relative z-10 mb-4 animate-[appearFromLeft_1.5s_ease-out_forwards] px-4 text-3xl font-bold text-gray-50 sm:mb-4 sm:text-5xl md:text-6xl lg:text-7xl">
+      <h1
+        className="relative z-10 mb-4 animate-[appearFromBottom_1.5s_ease-out_forwards] px-4 text-3xl font-bold text-gray-50 opacity-0 sm:mb-4 sm:text-5xl md:text-6xl lg:text-7xl"
+        style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
+      >
         Hi, I'm Denes
       </h1>
-      <div className="mx-auto h-1 w-24 animate-[fadeIn_1.5s_ease-out_forwards] rounded-full bg-linear-to-r from-gray-600 to-gray-400"></div>
-      <h2>
-        <span className="text-gray-100 relative z-10 mb-2 animate-[appearFromBottom_1.5s_ease-out_forwards] px-4 text-xl font-medium sm:mb-4 sm:text-2xl md:text-3xl lg:text-4xl">
-          Junior Frontend Developer
-        </span>
+      <div
+        className="mx-auto h-1 w-24 animate-[appearFromBottom_1.5s_ease-out_forwards] rounded-full bg-linear-to-r from-gray-600 to-gray-400 opacity-0"
+        style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
+      ></div>
+      <h2
+        className="relative z-10 mb-2 animate-[appearFromBottom_1.5s_ease-out_forwards] px-4 text-xl font-medium text-gray-100 opacity-0 sm:mb-4 sm:text-2xl md:text-3xl lg:text-4xl"
+        style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
+      >
+        <span>Junior Frontend Developer</span>
       </h2>
-      <p className="relative z-10 max-w-xl animate-[appearFromBottom_1.5s_ease-out_forwards] px-6 text-base text-white sm:text-lg">
+      <p
+        className="relative z-10 max-w-xl animate-[appearFromBottom_1.5s_ease-out_forwards] px-6 text-base text-white opacity-0 sm:text-lg"
+        style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
+      >
         My passion lies in crafting beautiful and functional and responsive web
         applications that provide exceptional user experiences.
       </p>
-      <div className="relative z-10 mt-4 flex w-full max-w-xs flex-col items-center justify-center gap-4 px-4 sm:mt-6 sm:max-w-none sm:flex-row sm:gap-6 md:gap-8">
+      <div
+        className="relative z-10 mt-4 flex w-full max-w-xs animate-[appearFromBottom_1.5s_ease-out_forwards] flex-col items-center justify-center gap-4 px-4 opacity-0 sm:mt-6 sm:max-w-none sm:flex-row sm:gap-6 md:gap-8"
+        style={{ animationDelay: "1s", animationFillMode: "forwards" }}
+      >
         <button
           className="group relative mt-2 w-full overflow-hidden rounded-full bg-linear-to-r from-gray-800 to-gray-600 px-8 py-3 text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl sm:mt-6 sm:w-auto"
           onClick={goToSection.bind(null, "contact")}
@@ -56,12 +70,13 @@ export default function Hero() {
           </span>
         </button>
       </div>
-      <i
-        className="absolute bottom-6 animate-bounce cursor-pointer text-3xl text-white sm:bottom-10 sm:text-4xl"
+      <div
+        className="absolute bottom-6 animate-[appearFromBottom_1.5s_ease-out_forwards] cursor-pointer text-3xl text-white opacity-0 sm:bottom-10 sm:text-4xl"
         onClick={goToSection.bind(null, "about")}
+        style={{ animationDelay: "1.2s", animationFillMode: "forwards" }}
       >
-        ↓
-      </i>
+        <GoChevronDown />
+      </div>
     </section>
   );
 }

@@ -62,7 +62,7 @@ export default function About() {
           <div
             className={`mx-auto h-1 w-24 rounded-full bg-linear-to-r from-gray-600 to-gray-400 ${
               isVisible
-                ? "animate-[fadeIn_1.5s_ease-out_forwards]"
+                ? "animate-[appearFromBottom_1.5s_ease-out_forwards] opacity-100"
                 : "opacity-0"
             }`}
           ></div>
