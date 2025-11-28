@@ -1,3 +1,5 @@
+import { GoChevronLeft, GoChevronRight } from "react-icons/go";
+
 interface ProjectNavigationProps {
   projects: any[];
   activeIndex: number;
@@ -28,7 +30,7 @@ export default function ProjectNavigation({
         className="z-10 hidden h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gray-700 bg-transparent text-2xl leading-none text-black transition-all hover:bg-gray-800 hover:text-white md:flex dark:border-gray-400 dark:text-white dark:hover:bg-gray-600"
         aria-label="Previous project"
       >
-        <span className="inline-block -translate-y-px">←</span>
+        <GoChevronLeft />
       </button>
       <div className="flex gap-2 sm:gap-3">
         {projects.map((_, index) => (
@@ -51,7 +53,7 @@ export default function ProjectNavigation({
         className="z-10 hidden h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gray-700 bg-transparent text-2xl leading-none text-black transition-all hover:bg-gray-800 hover:text-white md:flex dark:border-gray-400 dark:text-white dark:hover:bg-gray-600"
         aria-label="Next project"
       >
-        <span className="inline-block -translate-y-px">→</span>
+        <GoChevronRight />
       </button>
     </div>
   );
